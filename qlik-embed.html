@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+    crossorigin="anonymous"
+    type="application/javascript"
+    src="https://cdn.jsdelivr.net/npm/@qlik/embed-web-components"
+    data-host="https://kassovitz.us.qlikcloud.com"
+    data-client-id="2e2c3a66c97818c67a21d21c1c27d788"
+    data-redirect-uri="https://localhost:5500/oauth_callback.html"
+    data-access-token-storage="session"
+    data-auth-type="Oauth2"
+    >
+    </script>
+
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .app {
+        position: relative;
+        width: 100%;
+        height: calc(100vh - 180px);
+        border: 1px solid #bbb;
+        border-radius: 3px;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+      }
+      .row {
+        display: flex;
+        width: 100%;
+      }
+      .object {
+        position: relative;
+        flex: 1;
+        height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Full app</h1>
+    <p>copy cell value won't work within an iframe due to new cross-origin deprecation.</p>
+    <p>Need to add `allow="clipboard-write"` attribute to the ifrmae via Qlik Embed library</p>
+    <div class="app">
+      <qlik-embed
+      ui="classic/app"
+      app-id="d6152f1d-c366-4471-8aa6-7ae473e63f59"
+      sheet-id="zBAFH"
+      >
+      </qlik-embed>
+    </div>
+
+  </body>
+</html>

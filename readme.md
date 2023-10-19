@@ -1,6 +1,6 @@
 # Test Qlik Iframe vs Qlik Embed library
 
-Simple overview of use/purpose.
+Comparing funcitonality between IFrame and Qlik Embed when embedding the full Qlik app to a web page.
 
 ## Description
 
